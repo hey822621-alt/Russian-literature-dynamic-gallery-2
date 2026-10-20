@@ -1,0 +1,16 @@
+{
+  "name": "russian-literature-flow-gallery",
+  "version": "3.1.0",
+  "private": true,
+  "type": "module",
+  "description": "俄罗斯文学的流动画廊 · 47 story paintings",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs && node scripts/serve.mjs",
+    "preview": "node scripts/serve.mjs",
+    "check": "node scripts/build.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

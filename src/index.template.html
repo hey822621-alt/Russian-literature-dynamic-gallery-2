@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#eee9de"/>
+<meta name="description" content="俄罗斯文学的流动画廊：以中俄双语和逐情节独立油画，探索普希金、果戈里、陀思妥耶夫斯基、托尔斯泰与契诃夫的文学世界。"/>
+<title>俄罗斯文学的流动画廊</title>
+<style>/*STYLE_PLACEHOLDER*/</style>
+</head>
+<body>
+<div class="scroll-indicator" id="scrollIndicator" aria-hidden="true"></div>
+<header class="site-header" id="siteHeader">
+  <a href="#home" class="brand" aria-label="回到首页"><span class="brand-mark">Р</span><span class="brand-copy">俄罗斯文学的流动画廊<small class="ru">Галерея русской литературы</small></span></a>
+  <nav class="main-nav" aria-label="网站导航"><a href="#home" data-t="navHome">首页</a><a href="#authors" data-t="navAuthors">作家画廊</a><a href="#works" data-t="navWorks">作品展厅</a><a href="#map" data-t="navMap">文学地图</a></nav>
+  <div class="header-actions"><button class="lang-toggle" id="langToggle" type="button" aria-label="切换语言"><span id="langText">Рус</span><span class="lang-arrow">↗</span></button><button class="menu-toggle" id="mobileMenuToggle" aria-label="打开导航菜单" aria-expanded="false" type="button"><span></span><span></span></button></div>
+</header>
+<main>
+  <section id="home" class="hero">
+    <div class="hero-paint"><img src="/images/art/p01.webp" alt="俄罗斯贵族时代的彼得堡舞厅油画" fetchpriority="high"/><div class="hero-photo-glaze"></div></div>
+    <div class="hero-paper"><div class="hero-paper-top reveal"><span class="line-label">1799 — 1904</span><span class="hero-edition ru">ГАЛЕРЕЯ • 01—05</span></div>
+      <div class="hero-copy"><p class="eyebrow reveal" data-t="heroEyebrow">一场穿越俄罗斯文学黄金时代的旅行</p><h1 class="hero-title reveal"><span data-t="heroTitleLine1">俄罗斯文学的</span><span data-t="heroTitleLine2">流动画廊</span></h1><p class="hero-ru ru reveal">Галерея русской литературы</p><div class="small-rule reveal"></div><p class="hero-intro reveal" data-t="heroIntro">让文字成为画，让时间在画框之间缓缓流动。从普希金的舞会，到契诃夫最后的樱桃园。</p><a class="quiet-link magnetic" href="#authors"><span data-t="enterGallery">进入画廊</span><span class="round-arrow">↗</span></a></div>
+      <div class="hero-footer"><span class="ru">Путешествие сквозь эпоху</span><span data-t="heroFoot">五位作家 · 十四部作品 · 四十七幅画</span></div>
+    </div>
+    <div class="hero-side-caption ru">ИСКУССТВО · ВРЕМЯ · ЛИТЕРАТУРА</div>
+  </section>
+  <section id="authors" class="authors-section section-padding">
+    <div class="section-heading reveal"><p class="eyebrow"><span class="ornament">✦</span> <span data-t="authorsEyebrow">第一展厅 · 文学群像</span></p><h2 data-t="authorsHeading">五位作家，五个世界</h2><p class="ru section-subtitle">Пять писателей. Пять миров.</p></div>
+    <div class="cover-outer" id="coverOuter">
+      <div class="cover-backdrop" id="coverBackdrop"></div><div class="cover-glaze"></div>
+      <div class="cover-stage" id="coverStage" aria-label="作家 Cover Flow 画廊" tabindex="0"></div>
+      <div class="cover-controls"><button type="button" class="circle-control" id="authorPrev" aria-label="上一位作家">←</button><span id="authorCounter" class="ru count-readout">01 / 05</span><button type="button" class="circle-control" id="authorNext" aria-label="下一位作家">→</button></div>
+      <p class="drag-hint" data-t="dragHint">拖动、点击或使用方向键，进入另一位作家的世界</p>
+    </div>
+  </section>
+  <section id="works" class="works-section section-padding">
+    <div class="chapter-brow"><span data-t="chapterEyebrow">第二展厅 · 作品与情节</span><span class="ru" id="chapterIndex">01 / 05</span></div>
+    <div class="author-intro reveal" id="authorIntro"></div>
+    <div class="work-tabs" id="workTabs" role="tablist" aria-label="选择作品"></div>
+    <div class="artwork-shell reveal" id="artworkShell">
+      <div class="stage-media" id="stageMedia">
+        <div class="stage-images"><img class="stage-image active" id="stageImageA" alt=""/><img class="stage-image" id="stageImageB" alt=""/></div>
+        <div class="stage-texture"></div><div class="effect effect-one" aria-hidden="true"></div><div class="effect effect-two" aria-hidden="true"></div>
+        <span class="frame-number ru" id="frameNumber">01 / 05</span>
+        <button class="expand-image" id="expandImage" type="button" aria-label="放大当前油画"><span>↗</span></button>
+      </div>
+      <div class="stage-note" id="stageNote">
+        <div class="stage-note-top"><p class="eyebrow"><span data-t="paintingLabel">馆藏画作</span> <span class="ru" id="paintSerial">01 — 01</span></p><span class="tiny-diamond">◇</span></div>
+        <div class="stage-copy" id="stageCopy"><p class="note-overline" id="stageWork"></p><h3 id="stageTitle"></h3><p class="ru stage-ru" id="stageTitleRu"></p><div class="note-rule"></div><p class="stage-desc" id="stageDesc"></p></div>
+        <div class="stage-actions"><button class="ghost-btn" id="stagePrev" type="button" aria-label="上一幅画">←</button><button class="ghost-btn" id="stageNext" type="button" aria-label="下一幅画">→</button><div class="divider-vertical"></div><button class="play-toggle" id="playToggle" type="button" aria-label="暂停自动播放"><span id="playIcon">Ⅱ</span><span id="playLabel">暂停流动</span></button></div>
+        <div class="story-progress"><div id="storyProgressBar"></div></div>
+      </div>
+    </div>
+    <div class="thumb-head"><span data-t="thumbHead">沿着原著情节，缓慢翻阅</span><span class="ru" id="thumbCount">01 — 05</span></div>
+    <div id="thumbs" class="thumb-rail" aria-label="作品情节缩略图"></div>
+    <div class="work-literary-note reveal"><div class="literary-index">✧</div><div><span class="eyebrow" data-t="literaryConcept">作品的文学核心</span><h3 id="workIdea"></h3><p class="ru" id="workIdeaRu"></p></div><p id="workOverview"></p></div>
+  </section>
+  <section id="map" class="map-section section-padding">
+    <div class="section-heading reveal"><p class="eyebrow"><span class="ornament">✦</span> <span data-t="mapEyebrow">第三展厅 · 文学地理</span></p><h2 data-t="mapHeading">文学的地理与记忆</h2><p class="ru section-subtitle">География русской литературы</p></div>
+    <div class="map-composition reveal"><div class="map-visual"><div class="map-pattern" aria-hidden="true"></div><div class="map-orbit orbit-one"></div><div class="map-orbit orbit-two"></div><span class="map-compass ru">С Е В Е Р</span><div class="map-centre"><span class="map-monogram ru">РОССИЯ</span><span data-t="mapCentre">文学中的俄罗斯</span></div><div class="map-route"></div><button type="button" class="map-point pos-1" data-artist="pushkin"><span class="point-ring"></span><span data-t="mapStPete">圣彼得堡</span></button><button type="button" class="map-point pos-2" data-artist="gogol"><span class="point-ring"></span><span data-t="mapMoscow">莫斯科</span></button><button type="button" class="map-point pos-3" data-artist="tolstoy"><span class="point-ring"></span><span data-t="mapYasnaya">亚斯纳亚·波利亚纳</span></button><button type="button" class="map-point pos-4" data-artist="chekhov"><span class="point-ring"></span><span data-t="mapTaganrog">塔甘罗格</span></button></div>
+      <div class="map-essay"><p class="eyebrow" data-t="mapEssayEyebrow">从城市到庄园</p><h3 data-t="mapEssayHeading">故事发生的地方，也是文学诞生的地方。</h3><p data-t="mapEssayBody">圣彼得堡的河岸承载奥涅金和地下室人的孤独；莫斯科的舞会、战火与剧院映照人的命运；俄国乡间的庄园则收藏了关于故乡、家庭与失去的记忆。</p><p class="ru">От петербургских улиц до усадеб — пространство становится судьбой героев.</p><span class="map-disclaimer" data-t="mapDisclaimer">地理示意为艺术化排布，非精确比例地图。</span></div>
+    </div>
+  </section>
+  <section id="about" class="closing-section"><span class="ornate ru">✦</span><p class="ru">Время проходит. Истории остаются.</p><h2 data-t="closingTitle">时间流逝，故事仍在。</h2><p data-t="closingBody">一座缓缓流动的线上文学展厅。每一幅画，都是重新走近原著的一扇窗。</p><a href="#home" class="quiet-link light magnetic"><span data-t="backTop">回到起点</span><span class="round-arrow">↑</span></a></section>
+</main>
+<footer class="site-footer"><span>© 俄罗斯文学的流动画廊</span><span class="ru">ГАЛЕРЕЯ РУССКОЙ ЛИТЕРАТУРЫ</span><span data-t="footerText">文学与绘画的私人收藏</span></footer>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="查看画作大图" aria-hidden="true"><button type="button" id="lightboxClose" class="lightbox-close" aria-label="关闭大图">×</button><img id="lightboxImage" alt=""/><div class="lightbox-caption" id="lightboxCaption"></div><div class="lightbox-nav"><button id="lightboxPrev" aria-label="上一幅">←</button><button id="lightboxNext" aria-label="下一幅">→</button></div></div>
+<noscript><div style="position:fixed;inset:20%;padding:2rem;background:white;color:#333;z-index:1000;box-shadow:0 2rem 4rem #0003">画廊需要启用 JavaScript 才能切换画作。请在浏览器设置中启用 JavaScript。</div></noscript>
+<script>/*SCRIPT_PLACEHOLDER*/</script>
+</body></html>
